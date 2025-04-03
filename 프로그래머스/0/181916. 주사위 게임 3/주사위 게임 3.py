@@ -26,13 +26,19 @@ def solution(a, b, c, d):
             
             
     elif len(counter) == 3:
-        for value, count in values:
-            if count == 2:
-                p = value
-                break
-        one_values = [v[0] for v in values if v[1] == 1]
-        q, r = one_values[0], one_values[1]
-        return q * r
+        
+        if values[0][1] == 2:
+            q = values[1][0]
+            r = values[2][0]
+            answer = q * r
+        elif values[1][1] == 2:
+            q = values[0][0]
+            r = values[2][0]
+            answer = q * r    
+        elif values[2][1] == 2:
+            q = values[1][0]
+            r = values[0][0]
+            answer = q * r
             
     elif len(counter) == 4:
         answer = min(dice)
