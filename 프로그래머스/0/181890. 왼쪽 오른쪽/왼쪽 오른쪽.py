@@ -1,11 +1,11 @@
 def solution(str_list):
     answer = []
-    for i in range(len(str_list)):
-        if str_list[i] == "l":
+    for i in str_list:
+        if i == "l":
             answer = str_list[0:i]
             break
-        elif str_list[i] == "r":
-            answer = str_list[i+1:]
+        elif i == "r":
+            answer = str_list[i:]
             break
         else:
             answer = []
