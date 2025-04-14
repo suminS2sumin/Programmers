@@ -1,8 +1,5 @@
-from collections import defaultdict
-
 def solution(strArr):
-    groups = defaultdict(list)
+    a = [0] * 31
     for i in strArr:
-        groups[len(i)].append(i)
-    
-    return max(len(groups) for groups in groups.values())
+        a[len(i)] += 1
+    return max(a)
