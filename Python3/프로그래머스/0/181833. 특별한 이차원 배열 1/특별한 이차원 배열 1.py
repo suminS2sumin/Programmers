@@ -1,2 +1,5 @@
 def solution(n):
-    return [[int(x == y) for x in range(n)] for y in range(n)]
+    answer = [[0] * n for _ in range(n)]
+    for i in range(n):
+        answer[i][i] = 1
+    return answer
